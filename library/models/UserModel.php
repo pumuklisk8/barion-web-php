@@ -1,4 +1,9 @@
 <?php
+namespace Barion\models;
+
+use Barion\models\UserNameModel;
+
+use Barion\helpers\iBarionModel;
 
 class UserModel implements iBarionModel
 {

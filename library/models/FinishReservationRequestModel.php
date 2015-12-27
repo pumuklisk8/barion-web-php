@@ -1,4 +1,8 @@
 <?php
+namespace Barion\models;
+
+use Barion\models\BaseRequestModel;
+use Barion\models\PaymentTransactionModel;
 
 class FinishReservationRequestModel extends BaseRequestModel
 {

@@ -3,6 +3,7 @@
 /*
 *  Helper functions
 */
+namespace Barion;
 
 function jget($json, $propertyName)
 {

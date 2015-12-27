@@ -1,4 +1,5 @@
 <?php
+namespace Barion\helpers;
 
 interface iBarionModel
 {

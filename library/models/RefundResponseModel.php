@@ -1,4 +1,10 @@
 <?php
+namespace Barion\models;
+
+use Barion\models\BaseResponseModel;
+use Barion\models\TransactionDetailModel;
+
+use Barion\helpers\iBarionModel;
 
 class RefundResponseModel extends BaseResponseModel implements iBarionModel
 {

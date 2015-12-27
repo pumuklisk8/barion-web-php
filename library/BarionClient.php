@@ -6,8 +6,38 @@
 *  PHP library for implementing REST API calls towards the Barion payment system.  
 *  
 */
+namespace Barion;
 
-include 'helpers/loader.php';
+use Barion\models\PreparePaymentRequestModel;
+use Barion\models\PreparePaymentResponseModel;
+use Barion\models\FinishReservationRequestModel;
+use Barion\models\FinishReservationResponseModel;
+use Barion\models\RefundRequestModel;
+use Barion\models\RefundResponseModel;
+use Barion\models\PaymentStateRequestModel;
+use Barion\models\PaymentStateResponseModel;
+use Barion\models\PaymentQRRequestModel;
+
+use Barion\common\BarionEnvironment;
+use Barion\common\FundingSourceType;
+use Barion\common\PaymentStatus;
+use Barion\common\PaymentType;
+use Barion\common\QRCodeSize;
+use Barion\common\RecurrenceResult;
+use Barion\common\UILocale;
+
+DEFINE("BARION_API_URL_PROD", "https://api.barion.com/");
+DEFINE("BARION_WEB_URL_PROD", "https://secure.barion.com/Pay");
+DEFINE("BARION_API_URL_TEST", "https://api.test.barion.com/");
+DEFINE("BARION_WEB_URL_TEST", "https://secure.test.barion.com/Pay");
+
+DEFINE("API_ENDPOINT_PREPAREPAYMENT", "/Payment/Start");
+DEFINE("API_ENDPOINT_PAYMENTSTATE", "/Payment/GetPaymentState");
+DEFINE("API_ENDPOINT_QRCODE", "/QR/Generate");
+DEFINE("API_ENDPOINT_REFUND", "/Payment/Refund");
+DEFINE("API_ENDPOINT_FINISHRESERVATION", "/Payment/FinishReservation");
+
+DEFINE("PAYMENT_URL", "/Pay");
 
 class BarionClient
 {

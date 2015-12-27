@@ -1,4 +1,9 @@
 <?php
+namespace Barion\models;
+
+use Barion\models\BaseRequestModel;
+
+use Barion\common\QRCodeSize;
 
 class PaymentQRRequestModel extends BaseRequestModel
 {

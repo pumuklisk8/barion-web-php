@@ -1,4 +1,10 @@
 <?php
+namespace Barion\models;
+
+use Barion\models\BaseResponseModel;
+use Barion\models\TransactionResponseModel;
+
+use Barion\helpers\iBarionModel;
 
 class PreparePaymentResponseModel extends BaseResponseModel implements iBarionModel
 {

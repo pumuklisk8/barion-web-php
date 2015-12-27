@@ -1,4 +1,8 @@
 <?php
+namespace Barion\models;
+
+use Barion\models\ItemModel;
+use Barion\models\PayeeTransactionModel;
 
 class PaymentTransactionModel
 {

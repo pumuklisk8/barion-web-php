@@ -1,4 +1,8 @@
 <?php
+namespace Barion\models;
+
+use Barion\models\BaseResponseModel;
+use Barion\helpers\iBarionModel;
 
 class FinishReservationResponseModel extends BaseResponseModel implements iBarionModel
 {

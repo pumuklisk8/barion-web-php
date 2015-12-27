@@ -1,4 +1,12 @@
 <?php
+namespace Barion\models;
+
+use Barion\models\BaseRequestModel;
+use Barion\models\PaymentTransactionModel;
+
+use Barion\common\PaymentType;
+use Barion\common\FundingSourceType;
+
 
 class PreparePaymentRequestModel extends BaseRequestModel
 {

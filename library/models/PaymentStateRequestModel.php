@@ -1,4 +1,6 @@
 <?php
+namespace Barion\models;
+use Barion\models\BaseRequestModel;
 
 class PaymentStateRequestModel extends BaseRequestModel
 {

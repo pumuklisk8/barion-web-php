@@ -1,4 +1,6 @@
 <?php
+namespace Barion\models;
+use Barion\helpers\iBarionModel;
 
 class ItemModel implements iBarionModel
 {

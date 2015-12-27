@@ -1,4 +1,5 @@
 <?php
+namespace Barion\models;
 
 class ApiErrorModel {
     public $ErrorCode;
