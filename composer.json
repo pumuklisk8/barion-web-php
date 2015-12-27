@@ -13,7 +13,7 @@
 	"require": {},
 	"autoload": {
 		"psr-4": {
-			"pumuklisk8\\barion-web-php\\": ""
+			"Barion\\": "library/"
 		}
 	},
 	"extra": {}
