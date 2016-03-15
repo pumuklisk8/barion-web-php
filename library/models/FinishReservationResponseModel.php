@@ -26,10 +26,10 @@ class FinishReservationResponseModel extends BaseResponseModel implements iBario
         if (!empty($json)) {
             parent::fromJson($json);
 
-            $this->IsSuccessful = jget($json, 'IsSuccessful');
-            $this->PaymentId = jget($json, 'PaymentId');
-            $this->PaymentRequestId = jget($json, 'PaymentRequestId');
-            $this->Status = jget($json, 'Status');
+            $this->IsSuccessful = $this->jget($json, 'IsSuccessful');
+            $this->PaymentId = $this->jget($json, 'PaymentId');
+            $this->PaymentRequestId = $this->jget($json, 'PaymentRequestId');
+            $this->Status = $this->jget($json, 'Status');
 
             $this->Transactions = array();
 
@@ -41,6 +41,11 @@ class FinishReservationResponseModel extends BaseResponseModel implements iBario
                 }
             }
         }
+    }
+    
+    public function jget($json, $propertyName)
+    {
+        return isset($json[$propertyName]) ? $json[$propertyName] : null;
     }
 }
 

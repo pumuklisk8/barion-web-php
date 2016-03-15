@@ -47,19 +47,19 @@ class PaymentStateResponseModel extends BaseResponseModel implements iBarionMode
         if (!empty($json)) {
             parent::fromJson($json);
 
-            $this->PaymentId = jget($json, 'PaymentId');
-            $this->PaymentRequestId = jget($json, 'PaymentRequestId');
-            $this->Status = jget($json, 'Status');
-            $this->PaymentType = jget($json, 'PaymentType');
-            $this->FundingSource = jget($json, 'FundingSource');
-            $this->GuestCheckout = jget($json, 'GuestCheckout');
-            $this->CreatedAt = jget($json, 'CreatedAt');
-            $this->ValidUntil = jget($json, 'ValidUntil');
-            $this->CompletedAt = jget($json, 'CompletedAt');
-            $this->ReservedUntil = jget($json, 'ReservedUntil');
-            $this->Total = jget($json, 'Total');
-            $this->AllowedFundingSources = jget($json, 'AllowedFundingSources');
-            $this->RecurrenceResult = jget($json, 'RecurrenceResult');
+            $this->PaymentId = $this->jget($json, 'PaymentId');
+            $this->PaymentRequestId = $this->jget($json, 'PaymentRequestId');
+            $this->Status = $this->jget($json, 'Status');
+            $this->PaymentType = $this->jget($json, 'PaymentType');
+            $this->FundingSource = $this->jget($json, 'FundingSource');
+            $this->GuestCheckout = $this->jget($json, 'GuestCheckout');
+            $this->CreatedAt = $this->jget($json, 'CreatedAt');
+            $this->ValidUntil = $this->jget($json, 'ValidUntil');
+            $this->CompletedAt = $this->jget($json, 'CompletedAt');
+            $this->ReservedUntil = $this->jget($json, 'ReservedUntil');
+            $this->Total = $this->jget($json, 'Total');
+            $this->AllowedFundingSources = $this->jget($json, 'AllowedFundingSources');
+            $this->RecurrenceResult = $this->jget($json, 'RecurrenceResult');
 
             $this->Transactions = array();
 
@@ -71,6 +71,11 @@ class PaymentStateResponseModel extends BaseResponseModel implements iBarionMode
                 }
             }
         }
+    }
+    
+    public function jget($json, $propertyName)
+    {
+        return isset($json[$propertyName]) ? $json[$propertyName] : null;
     }
 }
 
