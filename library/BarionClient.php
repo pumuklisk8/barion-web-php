@@ -190,8 +190,7 @@ class BarionClient
         curl_setopt_array($ch, array(
             CURLOPT_URL => $fullUrl,
             CURLOPT_CAPATH => ".",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_RETURNTRANSFER => true
         ));
 
         $output = curl_exec($ch);
