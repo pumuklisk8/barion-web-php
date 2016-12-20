@@ -15,12 +15,13 @@ class BaseResponseModel{
             $this->RequestSuccessful = true;
             if (!empty($json['Errors'])) {
               $this->RequestSuccessful = false;
-            }
-            foreach ($json['Errors'] as $error) {
-                $apiError = new ApiErrorModel();
-                $apiError->fromJson($error);
-                array_push($this->Errors, $apiError);
-            }
+            
+              foreach ($json['Errors'] as $error) {
+                  $apiError = new ApiErrorModel();
+                  $apiError->fromJson($error);
+                  array_push($this->Errors, $apiError);
+              }
+	    }
         }
     }
 }
